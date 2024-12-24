@@ -1,5 +1,6 @@
 plugins {
     id("com.android.library")
+    id("maven-publish")
     alias(libs.plugins.kotlin.android)
 }
 
@@ -29,6 +30,19 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            afterEvaluate {
+                from(components["release"]) // Use Android's release variant
+            }
+            groupId = "vn.hnon.magicbottomnavigation"
+            artifactId = "magicbottomnavigation"
+            version = "0.0.1"
+        }
     }
 }
 
