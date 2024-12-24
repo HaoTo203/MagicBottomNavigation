@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="MagicBottomNavigationView">
+        <attr name="menu" format="reference" />
+        <attr name="bottomNavIconColor" format="reference" />
+        <attr name="bottomNavLabelStyle" format="reference" />
+        <attr name="bottomNavIconSize" format="dimension" />
+    </declare-styleable>
+</resources>
